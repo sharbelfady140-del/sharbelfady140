@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="64" y1="32" x2="448" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0B6E48"/>
+      <stop offset="100%" stop-color="#065336"/>
+    </linearGradient>
+    <linearGradient id="rimGrad" x1="110" y1="100" x2="402" y2="412" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF099"/>
+      <stop offset="28%" stop-color="#F7C744"/>
+      <stop offset="55%" stop-color="#D99816"/>
+      <stop offset="78%" stop-color="#FFE173"/>
+      <stop offset="100%" stop-color="#B87B0A"/>
+    </linearGradient>
+    <radialGradient id="faceGrad" cx="38%" cy="32%" r="68%">
+      <stop offset="0%" stop-color="#FFE680"/>
+      <stop offset="55%" stop-color="#F4BC33"/>
+      <stop offset="100%" stop-color="#CE8C13"/>
+    </radialGradient>
+    <linearGradient id="leafLight" x1="190" y1="190" x2="310" y2="310" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFE578"/>
+      <stop offset="100%" stop-color="#E5A722"/>
+    </linearGradient>
+    <linearGradient id="leafShade" x1="210" y1="220" x2="325" y2="335" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E2A41E"/>
+      <stop offset="100%" stop-color="#BA7D0A"/>
+    </linearGradient>
+    <filter id="coinShadow" x="68" y="76" width="376" height="376" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#02291A" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Squircle Emerald Background -->
+  <rect width="512" height="512" rx="116" fill="url(#bgGrad)"/>
+
+  <!-- Golden Coin -->
+  <g filter="url(#coinShadow)">
+    <!-- Outer Rim -->
+    <circle cx="256" cy="256" r="162" fill="url(#rimGrad)" stroke="#3D2606" stroke-width="4"/>
+    <!-- Recessed Inner Groove -->
+    <circle cx="256" cy="256" r="134" fill="#0B5338"/>
+    <!-- Inner Coin Face -->
+    <circle cx="256" cy="256" r="127" fill="url(#faceGrad)" stroke="#9D6808" stroke-width="2.5"/>
+
+    <!-- Top-Left Glossy Highlight Arc -->
+    <path
+      d="M 157 228 A 103 103 0 0 1 206 168"
+      stroke="#FFFFFF"
+      stroke-opacity="0.88"
+      stroke-width="14"
+      stroke-linecap="round"
+    />
+
+    <!-- Embossed Diagonal Leaf -->
+    <g>
+      <!-- Upper-left half of leaf -->
+      <path
+        d="M 192 318 C 194 246 238 198 318 192 C 282 232 240 274 192 318 Z"
+        fill="url(#leafLight)"
+      />
+      <!-- Lower-right half of leaf -->
+      <path
+        d="M 192 318 C 240 274 282 232 318 192 C 314 270 266 316 192 318 Z"
+        fill="url(#leafShade)"
+      />
+      <!-- Leaf crisp outline -->
+      <path
+        d="M 192 318 C 194 246 238 198 318 192 C 314 270 266 316 192 318 Z"
+        stroke="#362004"
+        stroke-width="5.5"
+        stroke-linejoin="round"
+      />
+      <!-- Central Vein -->
+      <path
+        d="M 188 322 Q 248 256 316 194"
+        stroke="#2E1B03"
+        stroke-width="11"
+        stroke-linecap="round"
+      />
+    </g>
+  </g>
+</svg>
